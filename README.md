@@ -1,16 +1,17 @@
 # DL-DRPE-Recognition
 
-## Grayscale image extraction
+This repository contains the code for the project "DL-DRPE-Recognition" which is a part of the course "General Physics Laboratory" at ZJU.
 
-```bash
-cd data
-unzip raw.zip
-```
+## Files 
+unet.py : The main file for the U-Net model. The network is 5 layers deep without attention mechanism.
 
-## Double Random Phase Encoding
+uent_attention.py : The main file for the U-Net with attention model.
 
-```bash
-cd code/src
-python crop_and_gray_images.py
-python drpe_encrypt.py --src_root ../../data/grey --dst_root ../../data/drpe_encrypted --phase1_seed 42 --phase2_seed 123
-```
+train_unet.py : The main file for training the U-Net model. Use SSIM loss and L1 loss.
+
+more_loss.py : Another file for training the U-Net model. Use more loss functions.
+
+./verify/recover.py : The main file for using trained models to recover the encrypted images.
+
+main.pdf: The project report.
+
